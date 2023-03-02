@@ -20,7 +20,7 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(height: 50),
           Text(
             'Best Seller',
-            style: Styles.titleMedium,
+            style: Styles.textStyle18,
           ),
           BestSellerListViewItem()
         ],
@@ -34,8 +34,8 @@ class BestSellerListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(height:125,
-
+    return SizedBox(
+      height: 125,
       child: Row(
         children: [
           AspectRatio(
