@@ -7,7 +7,6 @@ import 'package:go_router/go_router.dart';
 import '../../../../../constants.dart';
 import '../../../../../core/utils/app_router.dart';
 
-
 class BestSellerListViewItem extends StatelessWidget {
   const BestSellerListViewItem({super.key});
 
