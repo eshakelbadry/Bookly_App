@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'book_rating.dart';
 import 'custom_book_item.dart';
 
-class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({super.key});
+class BooksDetailsSection extends StatelessWidget {
+  const BooksDetailsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
