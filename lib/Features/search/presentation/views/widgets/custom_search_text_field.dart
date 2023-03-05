@@ -28,6 +28,6 @@ class CustomSearchTextField extends StatelessWidget {
           ),
         ),
       ),
-    ); 
+    );
   }
 }
