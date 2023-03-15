@@ -1,5 +1,5 @@
-import 'package:bookly_app/Features/home/presentation/views/widgets/books_action.dart';
-import 'package:bookly_app/core/utils/styles.dart';
+import 'books_action.dart';
+import '../../../../../core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import 'book_rating.dart';
