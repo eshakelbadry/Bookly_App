@@ -12,9 +12,10 @@ import 'Features/home/presentation/manager/newest_books_cubit/newest_books_cubit
 import 'Features/home/presentation/views/home_view.dart';
 import 'constants.dart';
 import 'core/utils/app_router.dart';
-import 'core/utils/service_locator.dart';
+import 'core/utils/setup_service_locator.dart';
 
 void main() {
+  setupServiceLocator();
   runApp(const BooklyApp());
 }
 
@@ -28,7 +29,7 @@ class BooklyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => FeaturedBooksCubit(
             getIt.get<HomeRepoImpl>(),
-          ),
+          )..fetchFeaturedBooks(),
         ),
         BlocProvider(
           create: (context) => NewestBooksCubit(
