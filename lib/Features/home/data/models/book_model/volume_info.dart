@@ -7,7 +7,7 @@ import 'reading_modes.dart';
 
 class VolumeInfo extends Equatable {
   final String? title;
-  final List<String>? authors;
+  final List<String> ?authors;
   final String? publisher;
   final String? publishedDate;
   final String? description;
