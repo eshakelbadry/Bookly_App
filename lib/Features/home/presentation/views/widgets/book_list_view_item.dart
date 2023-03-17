@@ -24,7 +24,8 @@ class BookListViewItem extends StatelessWidget {
         child: Row(
           children: [
             CustomBookImage(
-                imageUrl:bookModel.volumeInfo.imageLinks == null?'https://w7.pngwing.com/pngs/517/782/png-transparent-the-c-programming-language-2nd-edition-the-c-programming-language-book.png' :bookModel.volumeInfo.imageLinks.thumbnail),
+                imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ??
+                    'https://w7.pngwing.com/pngs/517/782/png-transparent-the-c-programming-language-2nd-edition-the-c-programming-language-book.png'),
             const SizedBox(width: 30),
             Expanded(
               child: Column(
@@ -43,7 +44,7 @@ class BookListViewItem extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 3),
-                   Text(
+                  Text(
                     bookModel.volumeInfo.authors![0],
                     style: Styles.textStyle14,
                   ),
@@ -54,7 +55,9 @@ class BookListViewItem extends StatelessWidget {
                           style: Styles.textStyle20
                               .copyWith(fontWeight: FontWeight.bold)),
                       const Spacer(),
-                      //  BookRating(count: bookModel.volumeInfo.ratingsCount??0,rating:bookModel.volumeInfo.averageRating??0),
+                      BookRating(
+                          count: bookModel.volumeInfo.ratingsCount?.round() ?? 0,
+                          rating: bookModel.volumeInfo.averageRating ?? 0),
                     ],
                   )
                 ],
