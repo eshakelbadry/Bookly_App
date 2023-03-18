@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../../core/utils/function/launch_url.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import '../../../data/models/book_model/book_model.dart';
 
@@ -25,12 +26,9 @@ class BooksAction extends StatelessWidget {
         Expanded(
           child: CustomButton(
             onPressed: () async {
-              Uri uri = Uri.parse(bookModel.volumeInfo.previewLink!);
-              if (await canLaunchUrl(uri)) {
-                await launchUrl(uri);
-              }
+              launchCustomUrl(context,bookModel.volumeInfo.previewLink!);
             },
-            text: 'preview',
+            text: getText(bookModel),
             fontSize: 16,
             backgroundColor: const Color(0xffEF8262),
             textColor: Colors.white,
@@ -42,5 +40,13 @@ class BooksAction extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  String getText(BookModel bookModel) {
+    if (bookModel.volumeInfo.previewLink == null) {
+      return 'Not Available';
+    } else {
+      return 'Preview';
+    }
   }
 }
