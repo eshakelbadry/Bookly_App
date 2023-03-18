@@ -32,7 +32,7 @@ class BooksDetailsSection extends StatelessWidget {
         Opacity(
           opacity: .7,
           child: Text(
-            bookModel.volumeInfo.authors![0],
+            bookModel.volumeInfo.authors?[0]??'',
             style: Styles.textStyle18.copyWith(
                 fontStyle: FontStyle.italic, fontWeight: FontWeight.w500),
           ),
@@ -42,9 +42,9 @@ class BooksDetailsSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           count: bookModel.volumeInfo.ratingsCount??0,
           rating:bookModel.volumeInfo.averageRating??0,
-        ),
+        ),  
         const SizedBox(height: 37),
-        const BooksAction(),
+         BooksAction(bookModel:bookModel ),
       ],
     );
   }

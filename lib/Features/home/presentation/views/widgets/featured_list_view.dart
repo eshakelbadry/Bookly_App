@@ -32,7 +32,7 @@ class FeaturedBooksListView extends StatelessWidget {
                   } ,
                     child: CustomBookImage(imageUrl: state.books[index].volumeInfo.imageLinks?.thumbnail ??'')),
                 );
-              },
+              }, 
             ),
           );
         } else if (state is FeaturedBooksFailure) {
