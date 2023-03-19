@@ -1,4 +1,4 @@
-import '../../../data/models/book_model/book_model.dart';
+import '../../../../../core/models/book_model/book_model.dart';
 import 'books_action.dart';
 import '../../../../../core/utils/styles.dart';
 import 'package:flutter/material.dart';

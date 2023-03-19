@@ -10,6 +10,8 @@ import 'Features/Splash/presentation/views/splash_view.dart';
 import 'Features/home/data/repos/home_repo_impl.dart';
 import 'Features/home/presentation/manager/newest_books_cubit/newest_books_cubit.dart';
 import 'Features/home/presentation/views/home_view.dart';
+import 'Features/search/data/repos/search_repo_impl.dart';
+import 'Features/search/presentation/manager/searched_books_cubit/searched_books_cubit.dart';
 import 'constants.dart';
 import 'core/utils/app_router.dart';
 import 'core/utils/setup_service_locator.dart';
@@ -36,6 +38,11 @@ class BooklyApp extends StatelessWidget {
             getIt.get<HomeRepoImpl>(),
           )..fetchNewestBooks(),
         ),
+        // BlocProvider(
+        //   create: (context) => SearchedBooksCubit(
+        //     getIt.get<SearchRepoImpl>(),
+        //   ),
+        // ),
       ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,

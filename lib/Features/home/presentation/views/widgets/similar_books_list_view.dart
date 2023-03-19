@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/widgets/custom_error_widget.dart';
 import '../../../../../core/widgets/custom_loading_indicator.dart';
-import '../../../data/models/book_model/book_model.dart';
+import '../../../../../core/models/book_model/book_model.dart';
 import '../../manager/similar_books_cubit/similar_books_cubit.dart';
 import 'custom_book_item.dart';
 

@@ -5,7 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
-import '../../../data/models/book_model/book_model.dart';
+import '../../../../../core/models/book_model/book_model.dart';
 import 'book_details_section.dart';
 import 'book_rating.dart';
 import 'books_action.dart';

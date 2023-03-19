@@ -1,4 +1,4 @@
-import '../../../data/models/book_model/book_model.dart';
+import '../../../../../core/models/book_model/book_model.dart';
 import 'book_rating.dart';
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
@@ -35,8 +35,8 @@ class BookListViewItem extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.5,
                     child: Text(
-                      bookModel.volumeInfo.title!,
-                      // 'data',
+                      bookModel.volumeInfo.title??'',
+                     
                       style: Styles.textStyle20.copyWith(
                         fontFamily: kGtSectraFine,
                       ),
@@ -46,7 +46,7 @@ class BookListViewItem extends StatelessWidget {
                   ),
                   const SizedBox(height: 3),
                   Text(
-                    bookModel.volumeInfo.authors![0],
+                    bookModel.volumeInfo.authors?[0]??'',
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(height: 3),
@@ -59,7 +59,7 @@ class BookListViewItem extends StatelessWidget {
                       BookRating(
                           count: bookModel.volumeInfo.ratingsCount ?? 0,
                           rating:
-                              bookModel.volumeInfo.averageRating?.round() ?? 0),
+                              bookModel.volumeInfo.averageRating ?? 0),
                     ],
                   )
                 ],

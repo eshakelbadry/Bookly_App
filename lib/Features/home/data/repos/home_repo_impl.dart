@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 
 import '../../../../core/errors/failures.dart';
 
-import '../models/book_model/book_model.dart';
+import '../../../../core/models/book_model/book_model.dart';
 import 'package:dio/dio.dart';
 
 import '../../../../core/utils/api_service.dart';
@@ -23,7 +23,7 @@ class HomeRepoImpl implements HomeRepo {
         try {
   books.add(BookModel.fromJson(item));
 } on Exception catch (e) {
-  // TODO
+ 
 }
       }
       return right(books);

@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../core/utils/function/launch_url.dart';
 import '../../../../../core/widgets/custom_button.dart';
-import '../../../data/models/book_model/book_model.dart';
+import '../../../../../core/models/book_model/book_model.dart';
 
 class BooksAction extends StatelessWidget {
   const BooksAction({super.key, required this.bookModel});
@@ -26,7 +26,7 @@ class BooksAction extends StatelessWidget {
         Expanded(
           child: CustomButton(
             onPressed: () async {
-              launchCustomUrl(context,bookModel.volumeInfo.previewLink!);
+              launchCustomUrl(context, bookModel.volumeInfo.previewLink!);
             },
             text: getText(bookModel),
             fontSize: 16,
